@@ -37,6 +37,7 @@ class MapScreen: UIViewController {
         func checkLocationAuthorization() {
             switch CLLocationManager.authorizationStatus() {
             case .authorizedWhenInUse:
+               // mapView.showsUserLocation = true
                 // Do Map Stuff
                 break
             case .denied:
