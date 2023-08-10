@@ -19,7 +19,7 @@ class MapScreen: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        checkLocationServices()
     }
     
     func setupLocationManager() {
@@ -50,6 +50,8 @@ class MapScreen: UIViewController {
                 break
             case .authorizedAlways:
                 break
+            @unknown default:
+                fatalError()
             }
         }
     }
@@ -57,7 +59,7 @@ class MapScreen: UIViewController {
 
 extension MapScreen: CLLocationManagerDelegate {
     
-    func locationManager(_ manager: CLLocationManager, didUpdateLocation locations: [CLLocation]) {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
     }
     
