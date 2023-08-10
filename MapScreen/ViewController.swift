@@ -9,6 +9,7 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 
 class ViewController: UIViewController {
 
@@ -19,3 +20,11 @@ class ViewController: UIViewController {
     }
 }
 
+extension MapScreen: CLLocationManagerDelegate {
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocation locations: [CLLocation]) {
+        
+    }
+    
+    
+}
